@@ -1,0 +1,361 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 110px;
+    box-sizing: border-box;
+    background-color: #FFF9F3;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.984); 
+    color: black; 
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header nav ul, .sub_header nav ul, .get-in-touch ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li, .sub_header nav ul li{
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.headerButton{
+    height: 50px;
+    justify-content: center;
+    background-color: #EC5518;
+    border: 1px solid #EC5518;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    padding: 0 20px;
+}
+
+.sub_header{
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 100px;
+    background-color: #fbecde;
+}
+
+.sub_header nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.social-icon {
+    margin-right: 10px; 
+    font-size: 18px; 
+    color: black; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+.sub_header nav ul li a i {
+    margin-right: 8px; 
+    font-size: 16px; 
+    vertical-align: middle; 
+}
+
+.social-icon:last-child {
+    margin-right: 0; 
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+}
+
+.hero img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-slogan {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.section-header{
+    font-size: 50px;;
+    text-align: center;
+    color: #0060ce;
+}
+.intro-para{
+    padding: 0px 130px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.intro-cardList, .how-you-can-help-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px; 
+    margin: 40px;
+    padding: 0px 80px;
+}
+.intro-card{
+    position: relative;
+    width: 375px;
+    height: 450px; 
+    border-radius: 20px;
+    overflow: hidden; 
+    box-shadow: 8px 12px 20px rgba(0, 0, 0, 0.228); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 12px 18px 30px rgba(0, 0, 0, 0.35); 
+}
+
+.card-thumbnail{
+    position: relative;
+    width: 375px; 
+    height: 450px;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.redirect-tab{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    padding: 25px 0px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 20px; 
+    font-weight: bold; 
+    text-align: center; 
+    color: #EC5518;
+    width: 375px;
+}
+.news-headline-tab {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding: 20px;
+    width: 100%; /* Matches the width of the card */
+    height: auto;
+    text-align: left;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Styling for the calendar icon and date */
+.news-date {
+    font-size: 14px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.news-date i {
+    margin-right: 5px; /* Adds spacing between icon and date */
+}
+
+/* Styling for the news headline */
+.news-headline {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Styling for the "Read More" link */
+.read-more {
+    font-size: 14px;
+    color: #EC5518; /* Highlighted color */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more i, .find-out-more-button i {
+    margin-left: 5px; /* Adds spacing between text and arrow icon */
+}
+
+.read-more:hover {
+    color: #d13e10; /* Darker color on hover */
+}
+.what-we-do-grid{
+    display: flex;
+    flex-direction: column;
+}
+.what-we-do-intro{
+    width: 500px;
+}
+.what-we-do-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    margin: 40px;
+    padding: 20px 80px;
+    gap: 30px;
+}
+
+.find-out-more-button{
+    background-color: white;
+    color:#EC5518;
+    font: 15px;
+    border: 1px solid #EC5518;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.find-out-more-button:hover{
+    background-color: #EC5518;
+    color: white;
+}
+
+.slideshowContainer {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.slide {
+    object-fit: contain;
+    border-radius: 10px;
+    position: absolute;
+    width: 550px;
+    transition: opacity 1s ease-in-out;
+}
+.active {
+    opacity: 1;
+    z-index: 2; 
+}
+.what-we-do-card{
+    border: 1px solid #EC5518;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+}
+
+.how-you-can-help{
+    padding-bottom: 30px;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 40px 120px;
+    justify-content: space-between;
+}
+.get-in-touch{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.get-in-touch h2, .Newsletter h2{
+    margin: 0px;
+    color: #EC5518;
+}
+.social-icon i{
+    font-size: 20px;
+}
+.email-link{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+.email-link i{
+    margin-right: 10px;
+}
+.Newsletter form{
+    display: flex;
+    flex-direction: column;
+}
+.Newsletter h2{
+    margin-bottom: 10px;
+}
+#signup-form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+#email, #firstName, #lastName{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+button{
+    background-color: #006BE7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+button:hover {
+    background-color: #055cc1;
+}
